@@ -15,12 +15,23 @@ void setup() {
     size(800, 200);
     
     //1. Set the variable named x to 50.
+    x = 50;
 }
 
 void draw() {
 
 	background(200,200,200);
+ fill(50,200,120);
+ noStroke();
+ ellipse(x, 100, 50, 50);
  
+ if(mousePressed) {
+   x += 5;
+ }
+ 
+ if(x == 800) {
+   playSound();
+ }
     //2. Draw an ellipse of height and width 50. Make sure to use the x variable for its X position. 
     //   Pick a y value that places it half way down the window.
       
@@ -37,7 +48,7 @@ void draw() {
 
 }
 
-/*
+
 import ddf.minim.*;
 boolean soundPlayed = false;
 void playSound() {
@@ -54,4 +65,3 @@ void playSound() {
   textSize(36);
   text("WINNER!!", width/2, height/2);
 }
-*/
